@@ -1,0 +1,59 @@
+```markdown
+# MuvAv_Preh4uzd — Moving Average EA (MT5)
+
+Кратко описание
+---------------
+EA, базиран на пресичане на бърза и бавна експоненциална (EMA) средна с допълнителни филтри:
+- ATR volatility filter
+- Trend filter (fast MA vs slow MA)
+- Risk-based lot sizing (рисков процент на сделка)
+- Stop Loss и Risk/Reward (TP), опция за trailing stop
+- Подходящ за EURUSD H1 (проверено с backtest и forward test)
+
+Файлова структура
+-----------------
+- MQL5/Experts/MuvAv_Preh4uzd.mq5 — основният EA код
+- LICENSE — MIT license
+- .gitignore — препоръчителни игнор файлове
+- docs/USAGE.md — инструкции за тестване и demo
+- backtests/ — място за отчетите от тестове (поставяйте тук)
+
+Бърз старт
+----------
+1. Клонирайте това репо:
+   git clone git@github.com:treebourks-debug/muav-preh4uzd.git
+
+2. Отворете MQL5/Experts/MuvAv_Preh4uzd.mq5 в MetaEditor (MT5) и компилирайте (.ex5).
+
+3. Strategy Tester (препоръчителни настройки):
+   - Symbol: EURUSD
+   - Period: H1
+   - Dates: 2023.01.01 - 2025.10.23 (пример)
+   - Deposit: 1000 USD
+   - Optimization: off (или genetic ако оптимизирате)
+   - Риск (пример): RiskPercent = 1.0
+
+Параметри (препоръчани)
+-----------------------
+- FastMA_Period = 10
+- SlowMA_Period = 40
+- RiskPercent = 1.0
+- StopLoss = 300 (points)
+- RiskReward = 2.0
+- UseATRFilter = true, ATR_MinValue = 100
+- MaxSpread = 30
+- MaxOpenTrades = 1
+
+Документация и тестове
+----------------------
+- docs/USAGE.md описва как да стартирате тестове и demo.
+- Съхранявайте важни backtest отчети в backtests/.
+
+Лиценз
+------
+MIT — вижте файла LICENSE за подробности.
+
+Контакти
+--------
+treebourks-debug
+```

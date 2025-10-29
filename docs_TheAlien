@@ -1,0 +1,33 @@
+```markdown
+# Usage & Testing Guide
+
+1. Open MetaEditor (MT5) and import/put the file:
+   MQL5/Experts/MuvAv_Preh4uzd.mq5
+
+2. Compile the EA to obtain .ex5.
+
+3. Strategy Tester recommended settings:
+   - Symbol: EURUSD
+   - Period: H1
+   - Modeling: Every tick based on real ticks
+   - Deposit: 1000 USD
+   - Leverage: 1:100
+
+4. Recommended input parameters:
+   - FastMA_Period = 10
+   - SlowMA_Period = 40
+   - RiskPercent = 1.0
+   - StopLoss = 300
+   - RiskReward = 2.0
+   - UseATRFilter = true
+   - ATR_MinValue = 100
+   - MaxSpread = 30
+   - MaxOpenTrades = 1
+
+5. Forward-testing:
+   - Run forward test on an out-of-sample period (e.g., 2023)
+   - Compare metrics: NetProfit, MaxDrawdown, Sharpe Ratio
+
+6. Demo:
+   - Run on demo account at least 2 weeks, monitor daily P/L and drawdown.
+```
